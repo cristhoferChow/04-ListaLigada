@@ -145,6 +145,22 @@ void inserirElemento()
 
 void excluirElemento()
 {
+	NO* deletar = (NO*)malloc(sizeof(NO));
+
+	cout << "Digite o numero que deseja excluir: \n" << endl;
+	cin >> deletar->valor;
+
+	deletar->prox = NULL;
+	if (primeiro == NULL) {
+		cout << "Lista vazia" << endl;
+	 }
+	else if (deletar == primeiro) {
+		primeiro = primeiro->prox;
+		free(deletar);
+	}
+	else {
+		cout << "Em construção" << endl;
+	}
 	
 }
 
@@ -161,13 +177,13 @@ void buscarElemento()
 
 		while (aux != NULL) {
 			if (aux->valor == busca) {
-				cout << "Valor encontrado";
+				cout << "Valor encontrado" << endl;
 				break;
 			}
 			aux = aux->prox;
 		}
 		if (aux == NULL) {
-			cout << "Valor nao encontrado" ;
+			cout << "Valor nao encontrado" << endl;
 		}
 
 	}
