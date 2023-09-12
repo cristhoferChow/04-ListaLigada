@@ -169,8 +169,8 @@ void excluirElemento()
 		else {
 			while (ant->prox != aux) {
 				ant = ant->prox;
-				ant->prox = aux->prox;
 			}
+				ant->prox = aux->prox;
 		}
 
 		free(aux);
